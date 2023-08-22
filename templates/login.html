@@ -1,7 +1,6 @@
-{% extends "base.html" %}
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +8,20 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/fontello.css">
-  <title>{% block title %}Login{% endblock %}</title>
+  <title>Login</title>
 </head>
 
 <body>
 
-  {% block content %}
+
   <ul class="nav nav-pills sticky-top bg-white nav-fill">
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'main-page' %}">
+      <a class="nav-link" href="index.html">
         <span style="font-weight: bold;">Главная</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'top-sellers' %}"><span style="font-weight: bold;">Топ продавцов</span>
+      <a class="nav-link" href="top-sellers.html"><span style="font-weight: bold;">Топ продавцов</span>
       </a>
     </li>
     <li class="nav-item">
@@ -51,14 +50,24 @@
       </a>
     </li>
   </ul>
-  <div class="container">
   <div class="row">
-    <div class="col-8" style="margin: 50px;">
+    <div class="col" style="margin: 50px;">
       <div class="display-2">
-        <span class="badge bg-primary">Страница авторизации пользователя</span>
+        <span class="badge bg-primary">Страница</span>
+      </div>
+    </div>
+    <div class="col" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">авторизации</span>
+      </div>
+    </div>
+    <div class="col" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">пользователя</span>
       </div>
     </div>
   </div>
+  <div class="container">
     <form method="post">
       <div class="row mb-3">
         <div class="col">
@@ -83,6 +92,6 @@
       </div>
     </form>
   </div>
-{% endblock %}
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
